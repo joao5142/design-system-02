@@ -1,0 +1,11 @@
+{
+  "name": "@can-i-helpu/prettier-config",
+  "license": "MIT",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "main": "prettierrc.js",
+  "devDependencies": {
+    "prettier": "3.3.3"
+  }
+}
