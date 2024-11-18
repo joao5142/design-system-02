@@ -1,3 +1,3 @@
-import dsEslint from '@gloomy-ui/eslint-config'
+import dsEslint from '@can-i-helpu-ds/eslint-config'
 
 export default [...dsEslint]

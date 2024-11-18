@@ -11,3 +11,5 @@ export const fontSizes = {
   '6xl': '3.25rem',
   '7xl': '3.75rem',
 }
+
+export type FontSizesTypes = keyof typeof fontSizes
