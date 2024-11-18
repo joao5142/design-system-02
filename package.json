@@ -1,11 +1,11 @@
 {
-  "name": "@can-i-helpu",
+  "name": "@can-i-helpu-ds",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "dev": "turbo run dev --parallel",
+    "dev": "turbo run dev:external",
     "build": "turbo run build",
     "changeset": "changeset",
     "changeset:version": "changeset version",

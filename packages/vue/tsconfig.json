@@ -1,0 +1,10 @@
+{
+  "extends": "@can-i-helpu-ds/ts-config/vue.json",
+  "include": ["src"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}

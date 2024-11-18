@@ -1,7 +1,7 @@
-import { registerService } from './services'
+import { registerService } from "@/services";
 
-const startDesignSystem = (vueApp: any) => {
-  registerService.registerComponents(vueApp)
-}
+const install = (app: any) => {
+  registerService.registerComponents(app);
+};
 
-export { startDesignSystem }
+export default install;

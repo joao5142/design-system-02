@@ -1,0 +1,26 @@
+import globals from 'globals'
+import pluginJs from '@eslint/js'
+import tseslint from 'typescript-eslint'
+import eslintConfigPrettier from 'eslint-config-prettier'
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
+
+export default [
+  { files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
+  {
+    languageOptions: { globals: globals.browser },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+    },
+    ignores: ['dist', 'build', 'node_modules'],
+  },
+  pluginJs.configs.recommended,
+  ...tseslint.configs.recommended,
+  eslintConfigPrettier,
+  eslintPluginPrettierRecommended,
+]
