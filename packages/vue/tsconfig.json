@@ -5,6 +5,7 @@
     "env.d.ts",
     "custom.d.ts",
     "src/types",
+    "src/components",
     "src/**/*.vue",
     "src/**/*.ts",
     "src/**/*.js"

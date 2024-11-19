@@ -1,5 +1,6 @@
 import { fileURLToPath, URL } from "node:url";
 import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
+import svgLoader from 'vite-svg-loader'
 
 import { resolve } from "path";
 import { defineConfig } from "vite";
@@ -21,6 +22,7 @@ export default defineConfig({
     vueDevTools(),
     dts(),
     vuetify({ autoImport: true }),
+    svgLoader()
   ],
   resolve: {
     alias: {
@@ -50,6 +52,6 @@ export default defineConfig({
     },
 
     outDir: "dist",
-    emptyOutDir: true,
+    emptyOutDir: false,
   },
 });

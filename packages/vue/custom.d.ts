@@ -6,3 +6,7 @@ declare module "*.svg?url_default" {
   const content: string;
   export default content;
 }
+declare module "*.svg?component" {
+  const content: string;
+  export default content;
+}

@@ -30,7 +30,7 @@
     "format": "prettier --write src/",
     "storybook": "storybook dev -p 6006",
     "storybook:fix:gp": "touch ./storybook-static/.nojekyll",
-    "build-storybook": "storybook build && yarn storybook:fix:gp"
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@can-i-helpu-ds/eslint-config": "*",
