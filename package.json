@@ -6,6 +6,7 @@
   ],
   "scripts": {
     "dev": "turbo run dev:external",
+    "build:storybook": "turbo run build:storybook",
     "build": "turbo run build",
     "changeset": "changeset",
     "changeset:version": "changeset version",

@@ -14,17 +14,14 @@ jobs:
           node-version: 18.20.4
           registry-url: https://npm.pkg.github.com/
 
-      - name: Install dependencies
-        run: npm i -g yarn
-
       - name: Install packages
-        run: yarn
+        run: npm install
 
       - name: Build lib
-        run: yarn build:packages
+        run: npm run build
 
       - name: Build storybook
-        run: yarn build:storybook
+        run: npm run build:storybook
 
       - name: Deploy Storybook on GH Pages 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
