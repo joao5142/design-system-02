@@ -6,6 +6,9 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**"]
     },
+    "build:storybook": {
+      "dependsOn": ["^build"]
+    },
     "dev:external": {
       "cache": false,
       "persistent": true
