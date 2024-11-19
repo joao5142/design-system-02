@@ -1,5 +1,11 @@
 # @can-i-helpu-ds/vue
 
+## 1.0.1
+
+### Patch Changes
+
+- Remove storybook dist on npm
+
 ## 1.0.0
 
 ### Major Changes

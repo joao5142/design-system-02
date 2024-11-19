@@ -1,7 +1,7 @@
 {
   "name": "@can-i-helpu-ds/vue",
   "author": "Can I help U",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "ISC",
   "type": "module",
   "main": "./dist/bundle.umd.cjs",
