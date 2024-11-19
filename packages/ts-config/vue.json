@@ -7,14 +7,17 @@
     "src/**/*.js"
   ],
   "exclude": [
+    "node_modules",
+    "dist",
     "src/components/**/*.stories.ts",
     "src/components/**/*.stories.tsx"
   ],
   "compilerOptions": {
     "composite": false,
     "declaration": true,
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "verbatimModuleSyntax": false,
-    "allowJs": true
+    "allowJs": true,
+    "strict": true,
+    "skipLibCheck": true
   }
 }

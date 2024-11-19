@@ -3,9 +3,9 @@
   "license": "MIT",
   "version": "1.0.0",
   "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsup src/index.ts --format=esm,cjs --dts",
     "dev:external": "tsup src/index.ts --format=esm,cjs --dts --watch",

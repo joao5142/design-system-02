@@ -1,26 +1,24 @@
 import { fileURLToPath, URL } from "node:url";
+import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
 
 import { resolve } from "path";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueDevTools from "vite-plugin-vue-devtools";
 
-import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
-
 import dts from "vite-plugin-dts";
-import path from "path";
 
 // https://vitejs.dev/config/
 
 //@ts-ignore
 export default defineConfig({
   plugins: [
-    vue(),
-    vueDevTools(),
-    cssInjectedByJsPlugin(),
-    dts({
-      insertTypesEntry: true,
+    vue({
+      template: { transformAssetUrls },
     }),
+    vueDevTools(),
+    dts(),
+    vuetify({ autoImport: true }),
   ],
   resolve: {
     alias: {
@@ -30,11 +28,11 @@ export default defineConfig({
 
   build: {
     lib: {
-      entry: {
-        bundle: resolve(__dirname, "./index.ts"),
-      },
-      name: "Can I Helpu - Design System",
+      entry: resolve(__dirname, "./index.ts"),
+      name: "Can I HelpU - Design System",
+      fileName: "bundle",
     },
+
     rollupOptions: {
       external: ["vue"],
 

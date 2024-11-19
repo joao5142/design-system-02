@@ -1,6 +1,15 @@
 {
   "extends": "@can-i-helpu-ds/ts-config/vue.json",
-  "include": ["src"],
+  "include": [
+    "index.ts",
+    "env.d.ts",
+    "custom.d.ts",
+    "src/types",
+    "src/**/*.vue",
+    "src/**/*.ts",
+    "src/**/*.js"
+  ],
+
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
