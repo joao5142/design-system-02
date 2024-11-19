@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import { ColorTypes } from "@can-i-helpu/tokens";
+import { ColorTypes } from "@can-i-helpu-ds/tokens";
 import { computed } from "vue";
 
 interface IProps {
@@ -45,6 +45,7 @@ const computedStatusClass = computed(() => {
 <style scoped lang="scss">
 .avatar {
   border-radius: 50%;
+  position: relative;
 
   &,
   img {
@@ -60,8 +61,6 @@ const computedStatusClass = computed(() => {
     width: v-bind(computedSize);
     height: v-bind(computedSize);
   }
-
-  position: relative;
 
   &--online::after,
   &--offline::after {

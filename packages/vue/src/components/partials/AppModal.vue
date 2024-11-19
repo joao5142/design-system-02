@@ -11,30 +11,31 @@
 </template>
 
 <script setup lang="ts">
-import { PhX } from '@phosphor-icons/vue'
+import { PhX } from "@phosphor-icons/vue";
+import { computed } from "vue";
 
 interface IProps {
-  modelValue: boolean
-  maxWidth?: string
-  isClosable?: boolean
+  modelValue: boolean;
+  maxWidth?: string;
+  isClosable?: boolean;
 }
 const props = withDefaults(defineProps<IProps>(), {
-  maxWidth: '700px',
+  maxWidth: "700px",
   isClosable: false,
-})
+});
 
 const emit = defineEmits<{
-  'update:modelValue': [value: boolean]
-}>()
+  "update:modelValue": [value: boolean];
+}>();
 
 const value = computed({
   get() {
-    return props.modelValue
+    return props.modelValue;
   },
   set(value) {
-    emit('update:modelValue', value)
+    emit("update:modelValue", value);
   },
-})
+});
 </script>
 
 <style scoped lang="scss">

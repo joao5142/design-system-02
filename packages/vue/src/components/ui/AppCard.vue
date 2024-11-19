@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
 import { useTheme } from "vuetify";
-import { ColorTypes } from "@can-i-helpu/tokens";
+import { ColorTypes } from "@can-i-helpu-ds/tokens";
 import { computed } from "vue";
 
 interface IProps {
@@ -22,7 +22,7 @@ interface IProps {
 }
 const theme = useTheme();
 const props = withDefaults(defineProps<IProps>(), {
-  background: "card",
+  background: "gray-500",
   borderColor: "gray-100",
   detailPosition: "left",
 });

@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import { ColorTypes } from "@can-i-helpu/tokens";
+import { ColorTypes } from "@can-i-helpu-ds/tokens";
 import { computed } from "vue";
 
 interface IProps {
@@ -18,9 +18,9 @@ interface IProps {
   full?: boolean;
   isFab?: boolean;
   rounded?: boolean;
-  borderColor?: ColorType;
-  color?: ColorType;
-  background?: ColorType;
+  borderColor?: ColorTypes;
+  color?: ColorTypes;
+  background?: ColorTypes;
   size?: "xl" | "lg" | "md" | "sm";
 
   transparent?: boolean;
@@ -30,7 +30,7 @@ interface IProps {
 const props = withDefaults(defineProps<IProps>(), {
   size: "md",
   background: "primary",
-  color: "white",
+  color: "white-900",
   glow: false,
 });
 

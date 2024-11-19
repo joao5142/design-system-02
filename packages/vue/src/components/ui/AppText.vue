@@ -10,7 +10,7 @@ import {
   FontSizesTypes,
   ColorTypes,
   FontFamilyTypes,
-} from "@can-i-helpu/tokens";
+} from "@can-i-helpu-ds/tokens";
 import { computed } from "vue";
 
 export type TextTagTypes =
@@ -121,7 +121,7 @@ const computedClasses = computed(() => {
   &--primary {
     font-family: "Mulish";
   }
-  &--seconday {
+  &--secondary {
     &--primary {
       font-family: "Mulish";
     }

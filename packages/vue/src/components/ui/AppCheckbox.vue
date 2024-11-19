@@ -18,10 +18,10 @@
 
 <script setup lang="ts">
 import { useTheme } from "vuetify";
-import CheckboxImage from "@/assets/icons/components/checkbox.png";
-import CheckboxFillImage from "@/assets/icons/components/checkbox-fill.png";
-import CheckboxDisabledImage from "@/assets/icons/components/checkbox-disabled.png";
-import CheckboxFillDisabledImage from "@/assets/icons/components/checkbox-fill-disabled.png";
+import CheckboxImage from "@/assets/img/icons/components/checkbox.png";
+import CheckboxFillImage from "@/assets/img/icons/components/checkbox-fill.png";
+import CheckboxDisabledImage from "@/assets/img/icons/components/checkbox-disabled.png";
+import CheckboxFillDisabledImage from "@/assets/img/icons/components/checkbox-fill-disabled.png";
 import { computed } from "vue";
 
 interface IProps {

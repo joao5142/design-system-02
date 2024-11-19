@@ -7,7 +7,6 @@
             class="cursor-pointer"
             :size="77"
             src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            @click="$router.push('/perfil/joao512')"
           />
 
           <div class="d-flex flex-column">
@@ -172,8 +171,8 @@ import LoveReaction from "@/assets/img/reactions/heart.svg?url_default";
 import SadReaction from "@/assets/img/reactions/sad.svg?url_default";
 import LaughReaction from "@/assets/img/reactions/laugh.svg?url_default";
 
-import LikeIconAction from "@/assets/img/thumb-icon.svg";
-import CommentIconAction from "@/assets/img/comment-icon.svg";
+import LikeIconAction from "@/assets/img/icons/thumb-icon.svg";
+import CommentIconAction from "@/assets/img/icons/comment-icon.svg";
 import { ref } from "vue";
 
 const userReacted = ref<boolean>(true);
