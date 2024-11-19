@@ -1,0 +1,9 @@
+.prettierrc.*
+.eslintrc.*
+.vscode/
+.storybook/
+vite.config.*
+vitest.config.*
+tsconfig.*
+*.stories.*
+*.spec.*
