@@ -30,7 +30,7 @@
     }
   }
 
-  background-color: rgb(var(--v-theme-dark-300));
+  background-color: rgb(var(--v-theme-gray-50));
 
   border-radius: 60px;
 

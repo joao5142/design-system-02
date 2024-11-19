@@ -1,14 +1,12 @@
 <template>
-  <div
-    class="avatar"
-    :class="`${computedBorderBallClass} ${computedStatusClass}`"
-  >
-    <img :src="src" :width="size" :height="size" />
+  <div :class="classes">
+    <img :src="src ?? UserDefaultImage" :width="size" :height="size" />
   </div>
 </template>
 
 <script setup lang="ts">
 import { ColorTypes } from "@can-i-helpu-ds/tokens";
+import UserDefaultImage from "@/assets/img/user.webp";
 import { computed } from "vue";
 
 interface IProps {
@@ -17,28 +15,24 @@ interface IProps {
   mode?: "on" | "off" | "";
   src: string;
 }
-const props = defineProps<IProps>();
+
+const props = withDefaults(defineProps<IProps>(), {
+  size: 50,
+  mode: "on",
+  ballBorderColor: "gray-400",
+});
 
 const computedSize = computed(() => {
   return `${props.size}px`;
 });
 
-const computedBorderBallClass = computed(() => {
-  if (props.ballBorderColor) {
-    return `border-${props.ballBorderColor}`;
-  }
-  return "";
-});
-
-const computedStatusClass = computed(() => {
-  if (props.mode !== undefined) {
-    if (props.mode == "on") {
-      return `avatar--online`;
-    } else {
-      return `avatar--offline`;
-    }
-  }
-  return "";
+const classes = computed(() => {
+  return {
+    avatar: true,
+    [`avatar--online`]: props.mode == "on",
+    [`avatar--offline`]: props.mode == "off",
+    [`border-${props.ballBorderColor}`]: Boolean(props.ballBorderColor),
+  };
 });
 </script>
 
@@ -80,11 +74,11 @@ const computedStatusClass = computed(() => {
   }
 
   &--online::after {
-    background-color: rgb(var(--v-theme-green-900));
+    background-color: rgb(var(--v-theme-green-400));
   }
 
   &--offline::after {
-    background-color: rgb(var(--v-theme-red-900));
+    background-color: rgb(var(--v-theme-red-400));
   }
 }
 </style>

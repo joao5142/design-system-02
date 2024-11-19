@@ -1,9 +1,5 @@
 <template>
-  <div
-    aria-label="card"
-    class="card"
-    :class="`${computedBackgroundClass} ${computedBorderCardClass} ${computedDisabledClass}`"
-  >
+  <div aria-label="card" :class="classes">
     <slot></slot>
   </div>
 </template>
@@ -18,28 +14,21 @@ interface IProps {
   disabled?: boolean;
 }
 const props = withDefaults(defineProps<IProps>(), {
-  background: "gray-500",
   borderColor: "gray-100",
 });
 
-const computedBackgroundClass = computed(() => {
-  return `bg-${props.background}`;
-});
-
-const computedBorderCardClass = computed(() => {
-  return `border-${props.borderColor}`;
-});
-
-const computedDisabledClass = computed(() => {
-  if (props.disabled !== undefined && props.disabled) {
-    return `card--disabled`;
-  }
-  return "";
+const classes = computed(() => {
+  return {
+    box: true,
+    [`box--disabled`]: props.disabled !== undefined && props.disabled,
+    [`border-${props.borderColor}`]: props.borderColor,
+    [`bg-${props.background}`]: props.background,
+  };
 });
 </script>
 
 <style scoped lang="scss">
-.card {
+.box {
   position: relative;
 
   width: 100%;

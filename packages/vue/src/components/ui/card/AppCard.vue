@@ -1,9 +1,5 @@
 <template>
-  <div
-    aria-label="card"
-    class="card"
-    :class="`${computedCardDetailClass} ${computedBackgroundClass} ${computedBorderCardClass} ${computedDisabledClass} ${computedDetailPositionClass}`"
-  >
+  <div aria-label="card" class="card" :class="classes">
     <slot></slot>
   </div>
 </template>
@@ -22,50 +18,27 @@ interface IProps {
 }
 const theme = useTheme();
 const props = withDefaults(defineProps<IProps>(), {
-  background: "gray-500",
+  background: "gray-50",
   borderColor: "gray-100",
   detailPosition: "left",
 });
 
-const computedBackgroundClass = computed(() => {
-  return `bg-${props.background}`;
+const classes = computed(() => {
+  return {
+    [`bg-${props.background}`]: props.background !== undefined,
+    [`border-${props.borderColor}`]: props.borderColor !== undefined,
+    "card--disabled": props.disabled !== undefined && props.disabled,
+    "card--detail": props.detailColor !== undefined && props.detailColor,
+    [`card--detail-right`]: props.detailPosition === "right",
+    [`card--detail-top`]: props.detailPosition === "top",
+    [`card--detail-bottom`]: props.detailPosition === "bottom",
+  };
 });
 
 const computedColorDetail = computed(() => {
-  if (props.detailColor) {
-    return theme.current.value.colors[props!.detailColor];
-  }
-  return "white";
-});
-
-const computedCardDetailClass = computed(() => {
-  if (props.detailColor !== undefined && props.detailColor) {
-    return "card--detail";
-  }
-
-  return "";
-});
-
-const computedBorderCardClass = computed(() => {
-  return `border-${props.borderColor}`;
-});
-
-const computedDisabledClass = computed(() => {
-  if (props.disabled !== undefined && props.disabled) {
-    return `card--disabled`;
-  }
-  return "";
-});
-
-const computedDetailPositionClass = computed(() => {
-  if (props.detailPosition !== undefined && props.detailPosition === "right") {
-    return `card--detail card--detail-right`;
-  } else if (props.detailPosition === "top") {
-    return `card--detail card--detail-top`;
-  } else if (props.detailPosition === "bottom") {
-    return `card--detail card--detail-bottom`;
-  }
-  return "";
+  return props.detailColor
+    ? theme.current.value.colors[props.detailColor]
+    : "white";
 });
 </script>
 
@@ -74,6 +47,8 @@ const computedDetailPositionClass = computed(() => {
   position: relative;
 
   width: 100%;
+
+  padding: 2rem;
 
   border-radius: 8px;
 

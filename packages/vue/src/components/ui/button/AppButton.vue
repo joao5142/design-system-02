@@ -1,7 +1,7 @@
 <template>
   <button
     class="button"
-    :class="styleClasses"
+    :class="classes"
     @click="!disabled ? $emit('click') : ''"
   >
     <slot></slot>
@@ -34,54 +34,22 @@ const props = withDefaults(defineProps<IProps>(), {
   glow: false,
 });
 
-const styleClasses = computed(() => {
-  let stringClass = "";
-
-  if (props.full !== undefined && props.full) {
-    stringClass += "button--full ";
-  }
-
-  if (props.disabled && props.disabled === true) {
-    stringClass += "button--disabled ";
-  }
-
-  if (props.color !== undefined) {
-    stringClass += `text-${props.color} `;
-  }
-
-  if (props.background !== undefined && !props.outlined) {
-    stringClass += `bg-${props.background} `;
-  }
-
-  if (props.outlined !== undefined && props.outlined) {
-    stringClass += "button--outlined  ";
-  }
-
-  if (props.borderColor !== undefined && props.borderColor) {
-    stringClass += `button--border border-${props.borderColor} `;
-  }
-
-  if (props.size) {
-    stringClass += `button--size-${props.size} `;
-  }
-
-  if (props.isFab !== undefined && props.isFab) {
-    stringClass += "button--fab ";
-  }
-
-  if (props.transparent !== undefined && props.transparent) {
-    stringClass += "button--transparent ";
-  }
-
-  if (props.rounded !== undefined && props.rounded) {
-    stringClass += "button--rounded ";
-  }
-
-  if (props.glow !== undefined && props.glow) {
-    stringClass += "button--glow ";
-  }
-
-  return stringClass;
+const classes = computed(() => {
+  return {
+    "button--full": props.full !== undefined && props.full,
+    "button--disabled": props.disabled !== undefined && props.disabled,
+    [`text-${props.color}`]: props.color !== undefined,
+    [`bg-${props.background}`]:
+      props.background !== undefined && !props.outlined,
+    "button--outlined": props.outlined !== undefined && props.outlined,
+    [`button--border border-${props.borderColor}`]:
+      props.borderColor !== undefined && props.borderColor,
+    [`button--size-${props.size}`]: props.size,
+    "button--fab": props.isFab !== undefined && props.isFab,
+    "button--transparent": props.transparent !== undefined && props.transparent,
+    "button--rounded": props.rounded !== undefined && props.rounded,
+    "button--glow": props.glow !== undefined && props.glow,
+  };
 });
 </script>
 

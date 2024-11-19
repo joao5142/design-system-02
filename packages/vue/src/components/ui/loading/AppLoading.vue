@@ -1,11 +1,13 @@
 <template>
-  <div class="loading" role="dialog">
-    <img :src="LoadingGif" alt="Loading" />
-  </div>
+  <teleport to="#app">
+    <div class="loading" role="dialog">
+      <img :src="LoadingGif" alt="Loading" />
+    </div>
+  </teleport>
 </template>
 
 <script setup>
-import LoadingGif from '@/assets/gifs/loading.gif'
+import LoadingGif from "@/assets/gifs/loading.gif";
 </script>
 
 <style lang="scss" scoped>
@@ -17,7 +19,7 @@ import LoadingGif from '@/assets/gifs/loading.gif'
   height: 100vh;
 
   border-radius: 0px;
-  z-index: 100000000;
+  z-index: 1;
 
   display: flex;
   align-items: center;

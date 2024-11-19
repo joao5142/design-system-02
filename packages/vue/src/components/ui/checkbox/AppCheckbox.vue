@@ -31,17 +31,8 @@ interface IProps {
 
 const props = defineProps<IProps>();
 
-const emit = defineEmits<{
-  "update:modelValue": [value: boolean];
-}>();
-
-const isSelected = computed({
-  get() {
-    return props.modelValue;
-  },
-  set(value: boolean) {
-    emit("update:modelValue", value);
-  },
+const isSelected = defineModel("", {
+  default: false,
 });
 
 const theme = useTheme();

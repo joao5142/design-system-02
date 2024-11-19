@@ -1,27 +1,28 @@
 <template>
-  <app-box class="post" background="dark-300">
+  <app-box class="post" background="white-50">
     <div class="post__header">
       <header>
         <div class="d-flex gap-20 align-center">
           <app-avatar
             class="cursor-pointer"
-            :size="77"
-            src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            :size="50"
+            :src="author?.avatar ?? UserDefaultImage"
           />
 
           <div class="d-flex flex-column">
-            <app-text as="strong" color="white">Joao ão </app-text>
-            <app-text class="d-block" as="span" color="text-700" size="xs"
-              >18:30</app-text
-            >
+            <app-text as="strong" color="white-900"
+              >{{ author?.name ?? "Blank" }}
+            </app-text>
+            <app-text class="d-block" as="span" color="text-700" size="xs">{{
+              createdAt ?? "00:00"
+            }}</app-text>
           </div>
         </div>
       </header>
 
       <app-text as="p" size="md" class="d-block mt-6">
-        Olá, pessoal! Meu nome é João e estou muito feliz em me juntar a vocês
-        aqui no Facebook. Sou apaixonado(a) por TI e jogos e estou ansioso para
-        compartilhar minhas ideias e aprender com todos vocês
+        Olá, pessoal! Meu nome é João . Sou apaixonado(a) por TI e jogos e estou
+        ansioso para compartilhar minhas ideias
       </app-text>
     </div>
 
@@ -71,7 +72,7 @@
         @click.self="isModalSetReactionOpen = true"
       >
         <like-icon-action
-          class="me-2"
+          class="me-2 post__actions-icon"
           :class="userReacted ? 'text-blue-600' : 'text-text-900'"
           @click.self="isModalSetReactionOpen = true"
         />
@@ -119,7 +120,7 @@
       </div>
 
       <div class="d-flex align-center cursor-pointer">
-        <comment-icon-action class="me-2" />
+        <comment-icon-action class="me-2 post__actions-icon" />
         <app-text as="strong" size="lg" color="text-900">Comentar</app-text>
       </div>
     </div>
@@ -163,6 +164,10 @@
 </template>
 
 <script setup lang="ts">
+import AppAvatar from "../avatar/AppAvatar.vue";
+import AppText from "../text/AppText.vue";
+import AppBox from "../box/AppBox.vue";
+
 import { vOnClickOutside } from "@vueuse/components";
 
 import LikeReaction from "@/assets/img/reactions/like.svg?url_default";
@@ -171,9 +176,29 @@ import LoveReaction from "@/assets/img/reactions/heart.svg?url_default";
 import SadReaction from "@/assets/img/reactions/sad.svg?url_default";
 import LaughReaction from "@/assets/img/reactions/laugh.svg?url_default";
 
-import LikeIconAction from "@/assets/img/icons/thumb-icon.svg";
-import CommentIconAction from "@/assets/img/icons/comment-icon.svg";
+import UserDefaultImage from "@/assets/img/user.webp";
+
+import LikeIconAction from "@/assets/img/icons/thumb.svg";
+import CommentIconAction from "@/assets/img/icons/comment.svg";
+
 import { ref } from "vue";
+
+interface IAuthor {
+  name: string;
+  avatar: string;
+}
+
+interface IProps {
+  author: IAuthor;
+  description: string;
+  comments: Array<{
+    author: IAuthor;
+    comment: string;
+  }>;
+  createdAt: string;
+}
+
+const props = defineProps<IProps>();
 
 const userReacted = ref<boolean>(true);
 const isModalSetReactionOpen = ref<boolean>(false);
@@ -193,12 +218,14 @@ const onClickOutsideHandler = (ev: PointerEvent) => {
 <style scoped lang="scss">
 .post {
   $paddingInline: 1rem;
+
   &__header {
     padding-top: 1.5rem;
     padding-inline: $paddingInline;
 
     margin-bottom: 1.5rem;
   }
+
   &__reactions {
     &-container {
       display: flex;
@@ -229,7 +256,13 @@ const onClickOutsideHandler = (ev: PointerEvent) => {
 
     padding-block: 1rem;
 
-    border-block: 0.3px solid rgb(var(--v-theme-gray-900));
+    border-block: 0.3px solid rgb(var(--v-theme-gray-100));
+
+    &-icon {
+      * {
+        fill: rgb(var(--v-theme-gray-600));
+      }
+    }
 
     & > * {
       padding: 0.5rem 3rem;
@@ -238,7 +271,7 @@ const onClickOutsideHandler = (ev: PointerEvent) => {
     }
 
     & > *:hover {
-      background: rgb(var(--v-theme-dark-600));
+      background: rgb(var(--v-theme-gray-50));
     }
 
     &-react {
@@ -279,7 +312,7 @@ const onClickOutsideHandler = (ev: PointerEvent) => {
 
   &__my-comment {
     padding: 0.5rem 0.6rem;
-    background: rgb(var(--v-theme-dark-600));
+    background: rgb(var(--v-theme-gray-50));
 
     border-radius: 20px;
 
