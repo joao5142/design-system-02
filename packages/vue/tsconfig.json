@@ -11,9 +11,11 @@
   ],
 
   "compilerOptions": {
+    "outDir": "./dist",
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }
-  }
+  },
+  "outputDir": "dist"
 }

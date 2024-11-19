@@ -40,8 +40,11 @@ export default defineConfig({
         globals: {
           vue: "Vue",
         },
+        dir: "dist",
       },
     },
-    emptyOutDir: false,
+
+    outDir: "dist",
+    emptyOutDir: true,
   },
 });

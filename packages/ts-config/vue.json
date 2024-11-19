@@ -1,4 +1,6 @@
 {
+  "extends": "./base.json",
+
   "include": [
     "index.ts",
     "env.d.ts",
@@ -19,5 +21,6 @@
     "allowJs": true,
     "strict": true,
     "skipLibCheck": true
-  }
+  },
+  "outputDir": "dist"
 }
