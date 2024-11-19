@@ -7,7 +7,8 @@ export const registerComponents = (vueApp: any) => {
 
   for (prop in components) {
     const component = components[prop];
-    vueApp.component(component.name, component);
+    console.log(component, component.__name);
+    vueApp.component(component.__name, component);
   }
 
   vueApp.use(vuetifyConfig);

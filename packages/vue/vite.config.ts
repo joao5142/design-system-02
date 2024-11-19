@@ -14,7 +14,9 @@ import dts from "vite-plugin-dts";
 export default defineConfig({
   plugins: [
     vue({
-      template: { transformAssetUrls },
+      template: {
+        transformAssetUrls,
+      },
     }),
     vueDevTools(),
     dts(),
@@ -24,6 +26,9 @@ export default defineConfig({
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
+  },
+  optimizeDeps: {
+    include: ["vuetify"],
   },
 
   build: {
