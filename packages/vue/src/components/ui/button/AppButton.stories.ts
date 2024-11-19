@@ -7,6 +7,12 @@ const meta = {
   component: AppButton,
   tags: ["autodocs"],
 
+  argTypes: {
+    size: {
+      control: "select",
+      options: ["sm", "md", "lg", "xl"],
+    },
+  },
   args: {},
 } as Meta;
 

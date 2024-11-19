@@ -16,7 +16,7 @@ interface IProps {
   disabled?: boolean;
   outlined?: boolean;
   full?: boolean;
-  isFab?: boolean;
+  fab?: boolean;
   rounded?: boolean;
   borderColor?: ColorTypes;
   color?: ColorTypes;
@@ -30,6 +30,7 @@ interface IProps {
 const props = withDefaults(defineProps<IProps>(), {
   size: "md",
   background: "primary",
+  borderColor: "primary",
   color: "white-900",
   glow: false,
 });
@@ -39,13 +40,14 @@ const classes = computed(() => {
     "button--full": props.full !== undefined && props.full,
     "button--disabled": props.disabled !== undefined && props.disabled,
     [`text-${props.color}`]: props.color !== undefined,
+    [`text-black-900`]: props.color !== undefined && props.outlined,
     [`bg-${props.background}`]:
       props.background !== undefined && !props.outlined,
     "button--outlined": props.outlined !== undefined && props.outlined,
     [`button--border border-${props.borderColor}`]:
-      props.borderColor !== undefined && props.borderColor,
+      props.outlined && props.borderColor !== undefined && props.borderColor,
     [`button--size-${props.size}`]: props.size,
-    "button--fab": props.isFab !== undefined && props.isFab,
+    "button--fab": props.fab !== undefined && props.fab,
     "button--transparent": props.transparent !== undefined && props.transparent,
     "button--rounded": props.rounded !== undefined && props.rounded,
     "button--glow": props.glow !== undefined && props.glow,
@@ -104,15 +106,19 @@ const classes = computed(() => {
 
   &--size-xl {
     padding: 1.25rem;
+    padding-inline: 2.5rem;
   }
   &--size-lg {
     padding: 1rem;
+    padding-inline: 2rem;
   }
   &--size-md {
     padding: 0.75rem;
+    padding-inline: 1.5rem;
   }
   &--size-sm {
     padding: 0.625rem;
+    padding-inline: 1.25rem;
   }
 
   &--fab {
