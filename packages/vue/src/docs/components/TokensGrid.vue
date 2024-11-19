@@ -40,7 +40,7 @@ withDefaults(defineProps<IProps>(), {
 .tokens-grid {
   width: 100%;
   font-family: sans-serif;
-  color: var(--v-theme-gray-0);
+  color: rgb(var(--v-theme-gray-50));
   border-collapse: collapse;
 }
 
@@ -48,21 +48,23 @@ withDefaults(defineProps<IProps>(), {
   padding: 0.75rem 1rem;
   text-align: left;
 
-  background-color: var(--v-theme-gray-600);
-  color: var(--v-theme-gray-900);
+  background-color: rgb(var(--v-theme-gray-300));
+  color: rgb(var(--v-theme-gray-900));
 }
 .tokens-grid tbody td {
+  font-weight: 600;
   padding: 0.75rem 1rem;
-  color: var(--v-theme-gray-200);
+  color: rgb(var(--v-theme-gray-200));
 }
 
 .tokens-grid tbody tr:nth-child(even) td {
-  background: var(--v-theme-gray-600);
+  background: rgb(var(--v-theme-gray-300));
+  color: rgb(var(--v-theme-gray-600));
 }
 
 .tokens-grid tbody tr:nth-child(odd) td {
-  background: var(--v-theme-gray-400);
+  background: rgb(var(--v-theme-gray-100));
 
-  color: var(--v-theme-gray-1000);
+  color: rgb(var(--v-theme-gray-900));
 }
 </style>
