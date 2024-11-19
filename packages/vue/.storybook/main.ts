@@ -35,6 +35,5 @@ const config: StorybookConfig = {
     name: getAbsolutePath("@storybook/vue3-vite"),
     options: {},
   },
-  staticDirs: ["./public"],
 };
 export default config;
