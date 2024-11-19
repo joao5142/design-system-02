@@ -1,7 +1,7 @@
 {
   "name": "@can-i-helpu-ds/eslint-config",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "type": "module",
   "main": "eslint.config.js",
   "version": "1.0.0",
