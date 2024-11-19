@@ -1,5 +1,3 @@
-import "vuetify/styles";
-
 import { vuetifyConfig } from "@/plugins/vuetify";
 
 import * as components from "../../components";
