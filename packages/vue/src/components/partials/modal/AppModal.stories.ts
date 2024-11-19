@@ -25,9 +25,11 @@ export const Default: Story = {
   render: (args, { argTypes }) => ({
     components: { AppModal },
     setup() {
+      // @ts-ignore
       const model = ref(args.modelValue);
 
       watch(
+        // @ts-ignore
         () => args.modelValue,
         (val) => {
           model.value = val;
