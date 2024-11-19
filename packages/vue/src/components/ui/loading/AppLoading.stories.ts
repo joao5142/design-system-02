@@ -4,8 +4,10 @@ import AppLoading from "./AppLoading.vue";
 const meta = {
   title: "General/Loading",
   component: AppLoading,
-  tags: ["autodocs"],
 
+  parameters: {
+    layout: "fullscreen",
+  },
   args: {},
 } as Meta;
 

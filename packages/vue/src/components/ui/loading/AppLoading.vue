@@ -1,9 +1,7 @@
 <template>
-  <teleport to="#app">
-    <div class="loading" role="dialog">
-      <img :src="LoadingGif" alt="Loading" />
-    </div>
-  </teleport>
+  <div class="loading" role="dialog">
+    <img :src="LoadingGif" alt="Loading" />
+  </div>
 </template>
 
 <script setup>

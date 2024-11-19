@@ -1,37 +1,27 @@
 <template>
-  <teleport to="#app">
-    <v-dialog v-model="isOpen" persistent :max-width="maxWidth" width="100%">
-      <v-card class="ma-0 modal">
-        <button
-          v-if="isClosable"
-          class="modal__close-btn"
-          @click="isOpen = false"
-        >
-          <ph-x :size="32" color="white" />
-        </button>
+  <v-dialog v-model="isOpen" persistent :max-width="maxWidth" width="100%">
+    <v-card class="ma-0 modal">
+      <button class="modal__close-btn" @click="isOpen = false">
+        <ph-x :size="32" color="white" />
+      </button>
 
-        <slot></slot>
-      </v-card>
-    </v-dialog>
-  </teleport>
+      <slot></slot>
+    </v-card>
+  </v-dialog>
 </template>
 
 <script setup lang="ts">
 import { PhX } from "@phosphor-icons/vue";
 
 interface IProps {
-  modelValue: boolean;
   maxWidth?: string;
-  isClosable?: boolean;
 }
 
 const props = withDefaults(defineProps<IProps>(), {
-  modelValue: false,
   maxWidth: "700px",
-  isClosable: true,
 });
 
-const isOpen = defineModel<boolean>("", { default: false });
+const isOpen = defineModel<boolean>({ default: true });
 </script>
 
 <style scoped lang="scss">

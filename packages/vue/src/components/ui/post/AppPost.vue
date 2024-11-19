@@ -72,7 +72,7 @@
         @click.self="isModalSetReactionOpen = true"
       >
         <like-icon-action
-          class="me-2 post__actions-icon"
+          class="me-2 post__actions-icon post__actions-icon-like"
           :class="userReacted ? 'text-blue-600' : 'text-text-900'"
           @click.self="isModalSetReactionOpen = true"
         />
@@ -126,7 +126,7 @@
     </div>
 
     <div class="post__comments">
-      <div class="d-flex gap-10 align-center mb-2">
+      <div class="d-flex gap-10 align-center mb-5">
         <app-avatar
           :size="30"
           src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -260,7 +260,13 @@ const onClickOutsideHandler = (ev: PointerEvent) => {
 
     &-icon {
       * {
-        fill: rgb(var(--v-theme-gray-600));
+        fill: rgb(var(--v-theme-black-400));
+      }
+
+      &-like {
+        * {
+          fill: rgb(var(--v-theme-blue-600));
+        }
       }
     }
 

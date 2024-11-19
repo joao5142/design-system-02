@@ -8,9 +8,16 @@ const meta = {
   tags: ["autodocs"],
 
   argTypes: {
+    size: {
+      control: { type: "number", min: 50, max: 500, step: 50 },
+    },
     ballBorderColor: {
       control: "select",
       options: ColorValues,
+    },
+    mode: {
+      control: "select",
+      options: ["on", "off"],
     },
   },
 
