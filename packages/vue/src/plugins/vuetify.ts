@@ -1,3 +1,5 @@
+import "vuetify/styles";
+
 import { createVuetify, ThemeDefinition } from "vuetify";
 import { fontSizes, fontWeights, colors } from "@can-i-helpu-ds/tokens";
 
