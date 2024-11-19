@@ -18,8 +18,8 @@ interface IProps {
 }
 const theme = useTheme();
 const props = withDefaults(defineProps<IProps>(), {
-  background: "gray-50",
-  borderColor: "gray-100",
+  background: "white-50",
+  borderColor: "white-100",
   detailPosition: "left",
 });
 
@@ -53,6 +53,8 @@ const computedColorDetail = computed(() => {
   border-radius: 8px;
 
   border: 1px solid rgb(var(--v-border-color));
+
+  box-shadow: 1px 10px 10px 5px rgb(var(--v-theme-gray-50));
 
   display: block;
 

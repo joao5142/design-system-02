@@ -2,7 +2,11 @@
   <input class="input" />
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineOptions({
+  name: "AppInput",
+});
+</script>
 
 <style scoped lang="scss">
 .input {
