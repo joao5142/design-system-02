@@ -1,14 +1,26 @@
-export {default as  AppModal } from './partials/AppModal.vue'
+import AppModal from "./partials/AppModal.vue";
 
-export {default as  AppAvatar } from './ui/AppAvatar.vue'
-export {default as  AppBox } from './ui/AppBox.vue'
-export {default as  AppButton } from './ui/AppButton.vue'
-export {default as  AppCard } from './ui/AppCard.vue'
-export {default as  AppCheckbox } from './ui/AppCheckbox.vue'
-export {default as  AppInput } from './ui/AppInput.vue'
-export {default as  AppLoading } from './ui/AppLoading.vue'
-export {default as  AppPost } from './ui/AppPost.vue'
-export {default as  AppText } from './ui/AppText.vue'
-export {default as  AppUserCard } from './ui/AppUserCard.vue'
+import AppAvatar from "./ui/AppAvatar.vue";
+import AppBox from "./ui/AppBox.vue";
+import AppButton from "./ui/AppButton.vue";
+import AppCard from "./ui/AppCard.vue";
+import AppCheckbox from "./ui/AppCheckbox.vue";
+import AppInput from "./ui/AppInput.vue";
+import AppLoading from "./ui/AppLoading.vue";
+import AppPost from "./ui/AppPost.vue";
+import AppText from "./ui/AppText.vue";
+import AppUserCard from "./ui/AppUserCard.vue";
 
- 
+export {
+  AppAvatar,
+  AppBox,
+  AppButton,
+  AppCard,
+  AppCheckbox,
+  AppInput,
+  AppLoading,
+  AppPost,
+  AppText,
+  AppUserCard,
+  AppModal,
+};
