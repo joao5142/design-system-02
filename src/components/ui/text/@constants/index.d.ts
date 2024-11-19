@@ -1,0 +1,2 @@
+export declare const textTagTypesArray: readonly ["p", "span", "strong", "b", "i", "em", "small", "sub", "sup", "mark", "del", "ins", "abbr", "cite", "code", "q", "var", "s", "u", "time", "kbd", "samp", "dfn", "h1", "h2", "h3", "h4", "h5", "h6"];
+//# sourceMappingURL=index.d.ts.map

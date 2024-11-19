@@ -1,0 +1,1 @@
+{"version":3,"file":"AppAvatar.vue.d.ts","sourceRoot":"","sources":["../../../../../src/components/ui/avatar/AppAvatar.vue"],"names":[],"mappings":"AAsFA,OAAO,EAAE,UAAU,EAAE,MAAM,wBAAwB,CAAC;AAMpD,UAAU,MAAM;IACd,IAAI,EAAE,MAAM,CAAC;IACb,eAAe,CAAC,EAAE,UAAU,CAAC;IAC7B,IAAI,CAAC,EAAE,IAAI,GAAG,KAAK,GAAG,EAAE,CAAC;IACzB,GAAG,EAAE,MAAM,CAAC;CACb;;;;;;AAwFD,wBAOG"}

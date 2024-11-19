@@ -1,0 +1,3 @@
+import{A as a}from"./AppAvatar-C4WUSlqh.js";import{C as s}from"./index-C-xxhLUR.js";import"./vue.esm-bundler-BlwabLn1.js";import"./_plugin-vue_export-helper-DlAUqK2U.js";const l={title:"General/Avatar",component:a,tags:["autodocs"],argTypes:{size:{control:{type:"number",min:50,max:500,step:50}},ballBorderColor:{control:"select",options:s},mode:{control:"select",options:["on","off"]}},args:{}},o={args:{}};var r,e,t;o.parameters={...o.parameters,docs:{...(r=o.parameters)==null?void 0:r.docs,source:{originalSource:`{
+  args: {}
+}`,...(t=(e=o.parameters)==null?void 0:e.docs)==null?void 0:t.source}}};const i=["Default"];export{o as Default,i as __namedExportsOrder,l as default};

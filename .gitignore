@@ -1,6 +1,0 @@
-dist
-node_modules
-build
-.turbo
-*storybook.log
-storybook-static
