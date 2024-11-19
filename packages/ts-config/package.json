@@ -2,5 +2,8 @@
   "name": "@can-i-helpu-ds/ts-config",
   "private": true,
   "version": "1.0.0",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/parser": "^8.8.0"
+  }
 }
