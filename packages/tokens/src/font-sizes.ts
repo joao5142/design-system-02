@@ -13,3 +13,5 @@ export const fontSizes = {
 }
 
 export type FontSizesTypes = keyof typeof fontSizes
+
+export const FontSizeValues = Object.keys(fontSizes)

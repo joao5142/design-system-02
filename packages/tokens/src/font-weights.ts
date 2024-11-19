@@ -6,3 +6,5 @@ export const fontWeights = {
 }
 
 export type FontWeightTypes = keyof typeof fontWeights
+
+export const FontWeightValues = Object.keys(fontWeights)

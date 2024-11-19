@@ -170,7 +170,7 @@ export const colors = {
     'white-600': '#FFFFFF7A',
     'white-700': '#FFFFFFA3',
     'white-800': '#FFFFFFCC',
-    'white- 900': '#FFFFFFEB',
+    'white-900': '#FFFFFFEB',
 
     'black-50': '#0000000A',
     'black-100': '#0000000F',
@@ -300,3 +300,5 @@ export const colors = {
 type DefaultColorTypes = typeof colors.light
 
 export type ColorTypes = keyof DefaultColorTypes
+
+export const ColorValues = Object.keys(colors.light)
