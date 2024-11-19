@@ -89,6 +89,6 @@
     "vuetify": "^3.6.6"
   },
   "peerDependencies": {
-    "vue": "^3.3.4"
+    "vue": "^3.5.13"
   }
 }
