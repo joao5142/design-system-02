@@ -3,6 +3,7 @@ import tseslint from 'typescript-eslint'
 import eslintConfigPrettier from 'eslint-config-prettier'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import pluginVue from 'eslint-plugin-vue'
+import vueTsEslintConfig from '@vue/eslint-config-typescript'
 
 export default [
   {
@@ -52,4 +53,5 @@ export default [
   eslintConfigPrettier,
   eslintPluginPrettierRecommended,
   ...pluginVue.configs['flat/recommended'],
+  ...vueTsEslintConfig(),
 ]
