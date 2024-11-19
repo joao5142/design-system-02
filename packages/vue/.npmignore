@@ -7,3 +7,4 @@ vitest.config.*
 tsconfig.*
 *.stories.*
 *.spec.*
+storybook-static
