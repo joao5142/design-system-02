@@ -8,7 +8,7 @@ interface IProps {
     family?: FontFamilyTypes;
 }
 declare const _default: __VLS_WithTemplateSlots<import('vue').DefineComponent<IProps, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, string, import('vue').PublicProps, Readonly<IProps> & Readonly<{}>, {
-    size: "2xl" | "3xl" | "4xl" | "5xl" | "6xl" | "7xl" | "xl" | "lg" | "md" | "sm" | "xs";
+    size: "2xl" | "3xl" | "4xl" | "5xl" | "6xl" | "7xl" | "xs" | "sm" | "md" | "lg" | "xl";
     as: "abbr" | "b" | "cite" | "code" | "del" | "dfn" | "em" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "i" | "ins" | "kbd" | "mark" | "p" | "q" | "s" | "samp" | "small" | "span" | "strong" | "sub" | "sup" | "time" | "u" | "var";
     family: "primary" | "secondary";
 }, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, any>, {
