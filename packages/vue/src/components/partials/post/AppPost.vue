@@ -10,11 +10,11 @@
           />
 
           <div class="d-flex flex-column">
-            <app-text as="strong" color="white-900"
-              >{{ author?.name ?? "Blank" }}
+            <app-text as="strong" color="text-700" weight="bold">
+              {{ author?.name ?? "User" }}
             </app-text>
             <app-text class="d-block" as="span" color="text-700" size="xs">{{
-              createdAt ?? "00:00"
+              createdAt ?? "18:00"
             }}</app-text>
           </div>
         </div>
