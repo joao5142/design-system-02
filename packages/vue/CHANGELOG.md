@@ -1,5 +1,11 @@
 # @can-i-helpu-ds/vue
 
+## 1.0.3
+
+### Patch Changes
+
+- Adjust AppPost component and AppUserCard component
+
 ## 1.0.2
 
 ### Patch Changes
