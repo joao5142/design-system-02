@@ -1,7 +1,17 @@
 {
   "name": "@can-i-helpu-ds/vue",
   "author": "Can I help U",
-  "version": "1.0.1",
+  "version": "1.0.2",
+  "description": "A design system  library for the Can I Help U project",
+  "keywords": [
+    "design-system",
+    "tokens",
+    "style",
+    "can-i-helpu",
+    "colors",
+    "typography",
+    "vue"
+  ],
   "license": "ISC",
   "type": "module",
   "main": "./dist/bundle.umd.cjs",

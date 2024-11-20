@@ -2,7 +2,13 @@
   "name": "@can-i-helpu-ds/prettier-config",
   "license": "MIT",
   "private": false,
-  "version": "1.0.0",
+  "author": "Can I help U",
+  "description": "A prettier-config library for the Can I Help U project",
+  "keywords": [
+    "prettier",
+    "style code"
+  ],
+  "version": "1.0.1",
   "type": "module",
   "main": "prettierrc.js",
   "devDependencies": {

@@ -1,7 +1,15 @@
 {
   "name": "@can-i-helpu-ds/ts-config",
   "private": true,
-  "version": "1.0.0",
+  "author": "Can I help U",
+  "description": "A ts-config library for the Can I Help U project",
+  "keywords": [
+    "ts",
+    "config",
+    "node",
+    "vue"
+  ],
+  "version": "1.0.1",
   "license": "MIT",
   "devDependencies": {
     "@typescript-eslint/parser": "^8.8.0"

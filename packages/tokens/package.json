@@ -1,7 +1,15 @@
 {
   "name": "@can-i-helpu-ds/tokens",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "author": "Can I help U",
+  "description": "A ts-config library for the Can I Help U project",
+  "keywords": [
+    "tokens",
+    "style",
+    "typography",
+    "ts"
+  ],
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -11,9 +19,6 @@
     "dev:external": "tsup src/index.ts --format=esm,cjs --dts --watch",
     "lint": "npx eslint '**/*.{js,ts,tsx}' --fix"
   },
-  "keywords": [],
-  "author": "",
-  "description": "",
   "devDependencies": {
     "@can-i-helpu-ds/eslint-config": "*",
     "@can-i-helpu-ds/ts-config": "*",

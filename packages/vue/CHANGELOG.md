@@ -1,5 +1,16 @@
 # @can-i-helpu-ds/vue
 
+## 1.0.2
+
+### Patch Changes
+
+- Adjust npm presentation
+- Updated dependencies
+  - @can-i-helpu-ds/prettier-config@1.0.1
+  - @can-i-helpu-ds/eslint-config@1.0.1
+  - @can-i-helpu-ds/ts-config@1.0.1
+  - @can-i-helpu-ds/tokens@1.0.1
+
 ## 1.0.1
 
 ### Patch Changes

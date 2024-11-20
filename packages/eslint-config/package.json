@@ -4,7 +4,14 @@
   "private": false,
   "type": "module",
   "main": "eslint.config.js",
-  "version": "1.0.0",
+  "author": "Can I help U",
+  "description": "A eslint-config library for the Can I Help U project",
+  "keywords": [
+    "eslint",
+    "fix errors",
+    "standardize"
+  ],
+  "version": "1.0.1",
   "devDependencies": {
     "@eslint/js": "^9.15.0",
     "@typescript-eslint/eslint-plugin": "^8.8.0",
