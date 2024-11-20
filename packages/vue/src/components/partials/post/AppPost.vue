@@ -164,9 +164,9 @@
 </template>
 
 <script setup lang="ts">
-import AppAvatar from "../avatar/AppAvatar.vue";
-import AppText from "../text/AppText.vue";
-import AppBox from "../box/AppBox.vue";
+import AppAvatar from "@/components/ui/avatar/AppAvatar.vue";
+import AppText from "@/components/ui/text/AppText.vue";
+import AppBox from "@/components/ui/box/AppBox.vue";
 
 import { vOnClickOutside } from "@vueuse/components";
 

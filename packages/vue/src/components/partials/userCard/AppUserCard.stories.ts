@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import AppUserCard from "./AppUserCard.vue";
-import { ColorValues } from "@can-i-helpu-ds/tokens";
 
 const meta = {
   title: "General/UserCard",
