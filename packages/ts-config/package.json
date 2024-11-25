@@ -1,6 +1,7 @@
 {
   "name": "@can-i-helpu-ds/ts-config",
-  "private": true,
+  "private": false,
+  "main": "./base.json",
   "author": "Can I help U",
   "description": "A ts-config library for the Can I Help U project",
   "keywords": [
@@ -9,7 +10,7 @@
     "node",
     "vue"
   ],
-  "version": "1.0.1",
+  "version": "1.0.0",
   "license": "MIT",
   "devDependencies": {
     "@typescript-eslint/parser": "^8.8.0"
