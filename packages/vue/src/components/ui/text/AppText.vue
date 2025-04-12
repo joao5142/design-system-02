@@ -46,11 +46,11 @@ const classes = computed(() => {
 
 .font-family {
   &--primary {
-    font-family: "Mulish";
+    font-family: "Inter";
   }
   &--secondary {
     &--primary {
-      font-family: "Montserrat";
+      font-family: "Inter";
     }
   }
 }

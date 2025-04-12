@@ -210,7 +210,6 @@ function handleReactPost(reaction: ReactionTypes) {
 }
 
 const onClickOutsideHandler = (ev: PointerEvent) => {
-  console.log(ev);
   isModalSetReactionOpen.value = false;
 };
 </script>
@@ -299,8 +298,8 @@ const onClickOutsideHandler = (ev: PointerEvent) => {
         padding: 0.5rem;
 
         img {
-          width: 60px;
-          height: 60px;
+          width: 40px;
+          height: 40px;
         }
       }
     }
