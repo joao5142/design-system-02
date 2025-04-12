@@ -2,6 +2,8 @@ import "vuetify/styles";
 
 import { createVuetify, ThemeDefinition } from "vuetify";
 import { fontSizes, fontWeights, colors } from "@can-i-helpu-ds/tokens";
+import * as components from "vuetify/components";
+import * as directives from "vuetify/directives";
 
 export const vuetifyFontSizesVariables = {
   "theme-font-size-xs": fontSizes.xs,
@@ -49,6 +51,7 @@ export const vuetifyConfig = createVuetify({
       dark: darkTheme,
     },
   },
-
+  components,
+  directives,
   defaults: {},
 });
