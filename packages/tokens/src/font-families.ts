@@ -1,4 +1,4 @@
-export const fontFamilies = { primary: 'Mulish', secondary: 'Montserrat' }
+export const fontFamilies = { primary: 'Inter', secondary: 'Montserrat' }
 
 export type FontFamilyTypes = keyof typeof fontFamilies
 

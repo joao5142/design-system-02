@@ -1,4 +1,4 @@
 export const fonts = {
-  primary: 'Mulish',
+  primary: 'Inter',
   secondary: 'Montserrat',
 }
