@@ -1,3 +1,3 @@
-import registerService from './register'
+import registerService from "./register";
 
-export { registerService }
+export { registerService };
