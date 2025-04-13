@@ -1,0 +1,3 @@
+import{A as e}from"./AppPost-tJ9zX38f.js";import"./vue.esm-bundler-BKJyKm6Y.js";import"./AppAvatar-BlHr1m_Q.js";import"./_plugin-vue_export-helper-DlAUqK2U.js";import"./AppText-B96Ge-DO.js";import"./AppBox-0sIoPnVn.js";import"./VImg-DG-yODh1.js";import"./dimensions-EDViMRT6.js";import"./getCurrentInstance-nZJizLIO.js";const g={title:"General/Post",component:e,tags:["autodocs"],args:{}},r={args:{}};var t,o,a;r.parameters={...r.parameters,docs:{...(t=r.parameters)==null?void 0:t.docs,source:{originalSource:`{
+  args: {}
+}`,...(a=(o=r.parameters)==null?void 0:o.docs)==null?void 0:a.source}}};const f=["Default"];export{r as Default,f as __namedExportsOrder,g as default};
