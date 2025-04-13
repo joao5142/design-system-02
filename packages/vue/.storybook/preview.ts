@@ -4,6 +4,7 @@ import { vuetifyConfig } from "../src/plugins/vuetify";
 import type { Preview } from "@storybook/vue3";
 
 import { setup } from "@storybook/vue3";
+import AppDefaultProvider from '../src/components/providers/defaultProvider/AppDefaultProvider.vue';
 
 setup((app) => {
   app.use(vuetifyConfig);
@@ -21,10 +22,10 @@ const preview: Preview = {
   decorators: [
     (_, data) => {
       return {
-        components: {},
+        components: {AppDefaultProvider},
 
         computed: {},
-        template: '<div id="app"><story /></div>',
+        template: '<AppDefaultProvider><story/></AppDefaultProvider>',
       };
     },
   ],
