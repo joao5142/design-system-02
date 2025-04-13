@@ -1,5 +1,19 @@
 # @can-i-helpu-ds/vue
 
+## 1.2.0
+
+### Minor Changes
+
+- Add new Components
+
+### Patch Changes
+
+- Updated dependencies
+  - @can-i-helpu-ds/eslint-config@1.2.0
+  - @can-i-helpu-ds/prettier-config@1.2.0
+  - @can-i-helpu-ds/tokens@1.2.0
+  - @can-i-helpu-ds/ts-config@1.2.0
+
 ## 1.1.0
 
 ### Minor Changes

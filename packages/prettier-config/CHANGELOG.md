@@ -1,5 +1,11 @@
 # @can-i-helpu-ds/prettier-config
 
+## 1.2.0
+
+### Minor Changes
+
+- Add new Components
+
 ## 1.1.0
 
 ### Minor Changes
