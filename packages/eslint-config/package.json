@@ -11,7 +11,7 @@
     "fix errors",
     "standardize"
   ],
-  "version": "1.0.1",
+  "version": "1.1.0",
   "devDependencies": {
     "@eslint/js": "^9.15.0",
     "@typescript-eslint/eslint-plugin": "^8.8.0",

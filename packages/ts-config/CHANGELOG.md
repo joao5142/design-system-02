@@ -1,5 +1,11 @@
 # @can-i-helpu-ds/ts-config
 
+## 1.1.0
+
+### Minor Changes
+
+- Adjust Components
+
 ## 1.0.0
 
 ### Major Changes
