@@ -4,7 +4,7 @@ import { ColorValues } from "@can-i-helpu-ds/tokens";
 import { computed, ref, watch } from "vue";
 
 const meta = {
-  title: "General/Modal",
+  title: "General/DefaultProvider",
   component: AppDefaultProvider,
   tags: ["autodocs"],
 

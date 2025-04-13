@@ -14,4 +14,15 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {},
+  render: (args) => ({
+    components: { AppUserCard },
+    setup() {
+      return { args };
+    },
+    template: `
+      <AppUserCard class="py-15" v-bind="args" >      
+          Card teste
+      </AppUserCard>
+    `,
+  }),
 };

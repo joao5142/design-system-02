@@ -3,7 +3,7 @@ import AppDivider from "./AppDivider.vue";
 import { ColorValues } from "@can-i-helpu-ds/tokens";
 
 const meta = {
-  title: "General/Card",
+  title: "General/Divider",
   component: AppDivider,
   tags: ["autodocs"],
 

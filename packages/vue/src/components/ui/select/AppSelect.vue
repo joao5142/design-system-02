@@ -1,13 +1,15 @@
-<template>
-  <v-select v-bind="props" class="select" />
+<template> 
+  <select class="select">
+    <option>{{ label }}</option>
+    <option v-for="(item, index) in items" :key="'item'+ index" :value="item">{{ item }}</option>
+  </select>
 </template>
 
 <script setup lang="ts">
-import { VSelect } from "vuetify/components";
-
-type VSelectTypes = VSelect["$props"];
-
-interface IProps extends /* @vue-ignore */ VSelectTypes {}
+interface IProps {
+  items: Array<string> 
+  label:string
+}
 
 defineOptions({
   name: "AppSelect",
@@ -16,9 +18,14 @@ defineOptions({
 const props = defineProps<IProps>();
 </script>
 
-<style scoped lang="scss">
+<style scoped  lang="scss">
+
 .select {
   outline: 0;
+
+  width:100%;
+
+  display:block;
 
   font-size: var(--v-theme-font-size-sm);
 
@@ -30,9 +37,11 @@ const props = defineProps<IProps>();
 
   border: 1px solid rgb(var(--v-theme-gray-400));
 
-  &::placeholder {
-    color: rgb(var(--v-theme-gray-600));
-  }
+  min-width: 240px;
+
+  
+  color: rgb(var(--v-theme-gray-600));
+   
 
   &:focus {
     border: 1px solid rgb(var(--v-theme-blue-700));

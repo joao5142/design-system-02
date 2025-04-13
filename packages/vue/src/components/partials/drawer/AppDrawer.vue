@@ -3,9 +3,10 @@
     v-bind="$attrs"
     v-model="isOpen"
     :max-width="maxWidth"
-    width="100%"
+    class="h-100"
+    v-if="isOpen"
   >
-    <v-card class="ma-0">
+    <v-card class="ma-0 pa-6 h-100">
       <button class="drawer__close-btn" @click="isOpen = false">
         <ph-x :size="32" color="white" />
       </button>
@@ -27,7 +28,7 @@ interface IProps {
 }
 
 const props = withDefaults(defineProps<IProps>(), {
-  maxWidth: "700px",
+  maxWidth: "500px",
 });
 
 const isOpen = defineModel<boolean>({ default: true });

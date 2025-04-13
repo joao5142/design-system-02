@@ -2,7 +2,6 @@
   <button
     class="button"
     :class="classes"
-    @click="!disabled ? $emit('click') : ''"
   >
     <slot></slot>
   </button>
@@ -122,8 +121,9 @@ const classes = computed(() => {
   }
 
   &--fab {
-    width: 4rem;
-    height: 4rem;
+    width: 2rem;
+    height: 2rem;
+    padding:0px;
     border-radius: 50%;
   }
 
