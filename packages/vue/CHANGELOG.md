@@ -1,5 +1,11 @@
 # @can-i-helpu-ds/vue
 
+## 1.2.1
+
+### Patch Changes
+
+- Adjust vuetify config
+
 ## 1.2.0
 
 ### Minor Changes
