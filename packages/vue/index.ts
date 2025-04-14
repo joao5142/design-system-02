@@ -1,5 +1,5 @@
 import "@/styles/main.scss";
-import { vuetifyConfig } from "@/plugins/vuetify";
 
-export { vuetifyConfig };
+export {  vuetifyConfig  } from "@/plugins/vuetify";
+
 export { default } from "@/index";

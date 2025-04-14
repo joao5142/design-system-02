@@ -43,7 +43,7 @@ const darkTheme: ThemeDefinition = {
 };
 
 export const vuetifyConfig = createVuetify({
-  ssr: true,
+  ssr: false,
   theme: {
     defaultTheme: "light",
     themes: {
