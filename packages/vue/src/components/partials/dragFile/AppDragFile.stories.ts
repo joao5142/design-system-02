@@ -4,6 +4,8 @@ import { ColorValues } from "@can-i-helpu-ds/tokens";
 import { computed, ref, watch } from "vue";
 import { AppButton } from "@/components";
 
+import "./AppDragFile.stories.styles.scss"
+
 const meta = {
   title: "General/DragFile",
   component: AppDragFile,
@@ -40,7 +42,7 @@ export const Default: Story = {
     },
     template: `
 
-      <AppDragFile style="height:400px" />
+      <AppDragFile class="storybook-drag-height" />
     `,
   }),
 };

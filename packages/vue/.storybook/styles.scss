@@ -1,0 +1,15 @@
+.storybook-max-h-full{
+    max-height: 100%;
+}
+.storybook-max-h-300{
+    max-height: 300px;
+}
+.storybook-overflow-auto{
+   overflow: hidden;
+
+    @media(max-width: 600px){
+        &{
+            overflow:auto;
+        }
+    }
+}

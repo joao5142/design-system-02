@@ -1,4 +1,5 @@
 import "../dist/style.css";
+import "./styles.scss";
 import { vuetifyConfig } from "../src/plugins/vuetify";
 
 import type { Preview } from "@storybook/vue3";
@@ -21,11 +22,22 @@ const preview: Preview = {
   },
   decorators: [
     (_, data) => {
+
+      const providerProps = data.parameters.providerProps || {};
+      const fullHeight = providerProps.fullHeight || false;
+
       return {
         components: {AppDefaultProvider},
 
+        setup() {
+          return {
+            providerProps,
+            containerClass: fullHeight ? 'storybook-max-h-full' : 'storybook-max-h-300',
+          };
+        },
+
         computed: {},
-        template: '<AppDefaultProvider style="max-height: 300px;"><story/></AppDefaultProvider>',
+        template: '<AppDefaultProvider :class="containerClass" class="storybook-overflow-auto"><story/></AppDefaultProvider>',
       };
     },
   ],
