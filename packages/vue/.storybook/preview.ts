@@ -25,7 +25,7 @@ const preview: Preview = {
         components: {AppDefaultProvider},
 
         computed: {},
-        template: '<AppDefaultProvider><story/></AppDefaultProvider>',
+        template: '<AppDefaultProvider style="max-height: 300px;"><story/></AppDefaultProvider>',
       };
     },
   ],

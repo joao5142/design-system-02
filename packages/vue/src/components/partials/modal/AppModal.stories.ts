@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from "@storybook/vue3";
 import AppModal from "./AppModal.vue";
 import { ColorValues } from "@can-i-helpu-ds/tokens";
 import { computed, ref, watch } from "vue";
+import { AppButton } from "@/components";
 
 const meta = {
   title: "General/Modal",
@@ -23,7 +24,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {},
   render: (args, { argTypes }) => ({
-    components: { AppModal },
+    components: { AppModal , AppButton },
     setup() {
       // @ts-ignore
       const model = ref(args.modelValue);
@@ -38,6 +39,8 @@ export const Default: Story = {
       return { args, model };
     },
     template: `
+      <AppButton @click="model = true">Abrir</AppButton>
+
       <AppModal v-bind="args" v-model="model">      
         <div style="display: flex; align-items:flex-start; gap: 8px;"> 
           teste

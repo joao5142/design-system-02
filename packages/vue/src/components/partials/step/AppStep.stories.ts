@@ -14,7 +14,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {},
+  args: {
+    current:0,
+  },
   render: (args) => ({
     components: { AppStep },
     setup() {

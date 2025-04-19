@@ -40,7 +40,7 @@ export const Default: Story = {
     template: `
       <AppDefaultProvider v-bind="args" v-model="model">      
         <div style="display: flex; align-items:flex-start; gap: 8px;"> 
-          teste
+           Vuetify Provider Slot
         </div> 
       </AppDefaultProvider>
     `,

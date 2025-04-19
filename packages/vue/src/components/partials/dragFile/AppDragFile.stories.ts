@@ -40,7 +40,7 @@ export const Default: Story = {
     },
     template: `
 
-      <AppDragFile />
+      <AppDragFile style="height:400px" />
     `,
   }),
 };
