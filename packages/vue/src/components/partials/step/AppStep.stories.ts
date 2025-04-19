@@ -20,15 +20,13 @@ export const Default: Story = {
     setup() {
       const steps = [{ name: "Email" }, { name: "Codigo" }, { name: "Senha" }];
 
-      const currentStep = ref<number>(0);
-
-      return { args, steps, currentStep };
+      return { args, steps };
     },
     template: `
-      <AppStep v-bind="args" :steps="steps" :currentStep="currentStep">
+      <AppStep v-bind="args" :steps="steps">
           <template #item.1> teste 1 </template>
 
-          <template #item.3> teste 2</template>
+          <template #item.2> teste 2</template>
 
           <template #item.3> teste 3</template>
       </AppStep>
