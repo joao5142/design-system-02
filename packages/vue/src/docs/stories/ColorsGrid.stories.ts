@@ -16,6 +16,12 @@ export const Default: Story = {
     layout: 'dark'
   },
 
+  parameters: {
+    providerProps: {
+      fullHeight: true,  
+    },
+  },
+
   argTypes: {
     theme: {
       options: ['light', 'dark'],

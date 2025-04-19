@@ -15,8 +15,20 @@ type Story = StoryObj<typeof meta>;
 
 export const Sizes: Story = {
   args: { tokens: fontSizes, hasRemValue: true },
+
+  parameters: {
+    providerProps: {
+      fullHeight: true,  
+    },
+  },
 } as any;
 
 export const Weights: Story = {
   args: { tokens: fontWeights },
+
+  parameters: {
+    providerProps: {
+      fullHeight: true,  
+    },
+  },
 } as any;

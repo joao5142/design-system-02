@@ -14,4 +14,9 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: { tokens: space, hasRemValue: true },
+  parameters: {
+    providerProps: {
+      fullHeight: true,  
+    },
+  },
 } as any;

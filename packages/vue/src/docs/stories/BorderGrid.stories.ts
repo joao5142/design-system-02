@@ -13,5 +13,10 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Radius: Story = {
+  parameters: {
+    providerProps: {
+      fullHeight: true,  
+    },
+  },
   args: { tokens: radii },
 } as any;
