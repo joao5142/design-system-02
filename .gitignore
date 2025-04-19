@@ -4,3 +4,4 @@ build
 .turbo
 *storybook.log
 storybook-static
+.npmrc
