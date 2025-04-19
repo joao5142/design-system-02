@@ -10,7 +10,9 @@
     "build": "turbo run build",
     "changeset": "changeset",
     "changeset:version": "changeset version",
-    "release": "turbo run build && changeset publish"
+    "release": "turbo run build && changeset publish",
+    "publish:github": "npm publish --registry=https://npm.pkg.github.com/",
+    "publish:both": "npm publish && npm run publish:github"
   },
   "packageManager": "npm@9.6.0",
   "engines": {

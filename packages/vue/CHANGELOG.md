@@ -1,5 +1,11 @@
 # @can-i-helpu-ds/vue
 
+## 1.3.0
+
+### Minor Changes
+
+- Adjust storybook documentation
+
 ## 1.2.2
 
 ### Patch Changes
